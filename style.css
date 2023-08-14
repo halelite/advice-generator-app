@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vh;
+    background: hsl(218, 23%, 16%);
+    font-family: 'Manrope', sans-serif;
+}
+
+section {
+    background-color: hsl(217, 19%, 24%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 430px;
+    height: 265px;
+    border-radius: 12px;
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.advice-num {
+    color: hsl(150, 100%, 66%);
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 3.5px;
+    font-weight: 500;
+    margin-top: 5px;
+    user-select: none;
+}
+
+section div {
+    height: 120px;
+    margin: 13px 20px 5px 20px;
+    margin: 10px;
+    padding: 5px;
+    overflow-y: auto;
+    text-align: center;
+    position: relative;
+}
+
+section div::-webkit-scrollbar {
+    width: 5px;
+    
+}
+
+section div::-webkit-scrollbar-track {
+    background: rgba(252, 251, 251, 0.2);
+    border-radius: 20px;
+}
+
+section div::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    border: 3px solid rgb(227, 219, 192);
+}
+
+#adText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    max-height: calc(100% - 10px);
+    font-size: 22px;
+    font-weight: bold;
+    color: hsl(193, 38%, 86%);
+    line-height: 30px;
+    padding-right: 5px;
+}
+
+#ldq::after {
+    content: "\201C";
+    font-size: 29px;
+    font-weight: 100;
+}
+
+#rdq::after {
+    content: "\201D";
+    font-size: 29px;
+    font-weight: 100;
+}
+
+.desktop-divider {
+    width: 350px;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    user-select: none;
+    margin-top: 10px;
+}
+
+.mobile-divider {
+    display: none;
+}
+
+.btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    transform: translate(50%, 50%);
+    border: none;
+    background: url(./images/icon-dice.svg), hsl(150, 100%, 66%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn:hover {
+    box-shadow: 0 0 38px hsl(150, 100%, 66%);
+    transition: all 0.2s;
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.attribution {
+    position: absolute;
+    bottom: 5px;
+    font-size: 11px;
+    width: 100%;
+    text-align: center;
+    color: #707070;
+}
+
+.attribution a {
+    color: hsl(228, 39%, 45%);
+}
+
+@media screen and (max-width: 376px) {
+    section {
+        width: 90%;
+        height: 280px;
+    }
+
+    section div {
+        height: 150px;
+    }
+
+    #adText {
+        font-size: 21px;
+        width: 100%;
+        font-weight: 700;
+    }
+
+    .desktop-divider {
+        display: none;
+    }
+
+    .mobile-divider {
+        display: block;
+        position: absolute;
+        bottom: 18%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 85%;
+    }
+
+}
